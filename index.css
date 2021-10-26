@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+.name {
+  font-size: 7rem;
+}
+
+.container {
+  animation: containerFadeIn 2s;
+}
+
+@keyframes containerFadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+.icon:hover{
+  background: white; /* overrides all background properties */
+  color: black;
+}
