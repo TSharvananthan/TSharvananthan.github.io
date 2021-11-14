@@ -1,0 +1,82 @@
+{
+  "python": [
+    {
+      "technology": "Flask",
+      "description": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
+      "duration": "Some Time Years Ago",
+      "imageLink": "https://miro.medium.com/max/1000/1*8wQbSainBtqAGfLQlSMZdQ.png"
+    },
+    {
+      "technology": "Pandas",
+      "description": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
+      "duration": "Some Time Years Ago",
+      "imageLink": "https://miro.medium.com/max/1000/1*8wQbSainBtqAGfLQlSMZdQ.png"
+    },
+    {
+      "technology": "Numpy",
+      "description": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
+      "duration": "Some Time Years Ago",
+      "imageLink": "https://miro.medium.com/max/1000/1*8wQbSainBtqAGfLQlSMZdQ.png"
+    },
+    {
+      "technology": "Jupyter",
+      "description": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
+      "duration": "Some Time Years Ago",
+      "imageLink": "https://miro.medium.com/max/1000/1*8wQbSainBtqAGfLQlSMZdQ.png"
+    },
+    {
+      "technology": "OpenCV",
+      "description": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
+      "duration": "Some Time Years Ago",
+      "imageLink": "https://miro.medium.com/max/1000/1*8wQbSainBtqAGfLQlSMZdQ.png"
+    },
+    {
+      "technology": "BeautifulSoup",
+      "description": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
+      "duration": "Some Time Years Ago",
+      "imageLink": "https://miro.medium.com/max/1000/1*8wQbSainBtqAGfLQlSMZdQ.png"
+    }
+  ],
+
+  "javascript": [
+    {
+      "technology": "React.js",
+      "description": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
+      "duration": "Some Time Years Ago",
+      "imageLink": "https://miro.medium.com/max/1000/1*8wQbSainBtqAGfLQlSMZdQ.png"
+    },
+    {
+      "technology": "Express.js",
+      "description": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
+      "duration": "Some Time Years Ago",
+      "imageLink": "https://miro.medium.com/max/1000/1*8wQbSainBtqAGfLQlSMZdQ.png"
+    },
+    {
+      "technology": "Node.js",
+      "description": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
+      "duration": "Some Time Years Ago",
+      "imageLink": "https://miro.medium.com/max/1000/1*8wQbSainBtqAGfLQlSMZdQ.png"
+    },
+    {
+      "technology": "Axios",
+      "description": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
+      "duration": "Some Time Years Ago",
+      "imageLink": "https://miro.medium.com/max/1000/1*8wQbSainBtqAGfLQlSMZdQ.png"
+    }
+  ],
+
+  "other": [
+    {
+      "technology": "MongoDB",
+      "description": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
+      "duration": "Some Time Years Ago",
+      "imageLink": "https://miro.medium.com/max/1000/1*8wQbSainBtqAGfLQlSMZdQ.png"
+    },
+    {
+      "technology": "Rust",
+      "description": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
+      "duration": "Some Time Years Ago",
+      "imageLink": "https://miro.medium.com/max/1000/1*8wQbSainBtqAGfLQlSMZdQ.png"
+    }
+  ]
+}
