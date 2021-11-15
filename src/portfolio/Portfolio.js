@@ -57,7 +57,7 @@ class Portfolio extends React.Component {
                 <Nav.Link>Projects</Nav.Link>
                 <Nav.Link>Experience</Nav.Link>
                 <Nav.Link>Contact</Nav.Link>
-                <Nav.Link>Blog</Nav.Link>
+                <Nav.Link href="https://than.hashnode.dev" target="blank">Blog</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
