@@ -1,0 +1,51 @@
+[
+  {
+    "name": "TSharvananthan.github.io",
+    "depandancies": "React.js, Node.js",
+    "description": "This is a description",
+    "github": "https://github.com/TSharvananthan/TSharvananthan.github.io",
+    "isWorkInProgress": 1
+  },
+  {
+    "name": "Rusty Chains",
+    "depandancies": "Rust, Python",
+    "description": "This is a description",
+    "github": "https://github.com/TSharvananthan/rusty-chains",
+    "isWorkInProgress": 1
+  },
+  {
+    "name": "Sentimentality",
+    "depandancies": "Python, Javascript, Docker, HTML/CSS, Jupyter",
+    "description": "This is a description",
+    "github": "https://github.com/TSharvananthan/Sentimentality",
+    "isWorkInProgress": 0
+  },
+  {
+    "name": "Video To Slide Show",
+    "depandancies": "Python",
+    "description": "This is a description",
+    "github": "https://github.com/TSharvananthan/VideoToSlideShow",
+    "isWorkInProgress": 0
+  },
+  {
+    "name": "Lyric Cloud",
+    "depandancies": "Python",
+    "description": "This is a description",
+    "github": "https://github.com/TSharvananthan/LyricCloud",
+    "isWorkInProgress": 0
+  },
+  {
+    "name": "Color Filter",
+    "depandancies": "Python, OpenCV",
+    "description": "This is a description",
+    "github": "https://github.com/TSharvananthan/ColorFilter",
+    "isWorkInProgress": 0
+  },
+  {
+    "name": "AniMatch",
+    "depandancies": "Python, HTML/CSS, React.js, Javascript",
+    "description": "This is a description",
+    "github": "https://github.com/TSharvananthan/Animatch",
+    "isWorkInProgress": 0
+  }
+]

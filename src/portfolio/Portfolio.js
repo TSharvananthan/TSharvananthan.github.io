@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import { Navbar, Container, Nav, NavDropdown, Col, Image, Row, Button, Card, Tab, Tabs } from 'react-bootstrap';
+import {
+  Navbar, Container, Nav, NavDropdown, Col,
+  Image, Row, Button, Card, Tab, Tabs, Badge,
+  Stack, Form
+} from 'react-bootstrap';
 import Typed from 'react-typed';
 
 import "./Portfolio.css";
 import skillsJSON from "./skills.json";
+import projectsJSON from "./projects.json"
+import hub from './hub.png';
 
 // https://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript
 function toTitleCase(str) {
@@ -14,6 +20,14 @@ function toTitleCase(str) {
       return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
     }
   );
+}
+
+const completeBadge = () => {
+  return <Badge bg="success"> Complete </Badge>
+}
+
+const workInProgressBadge = () => {
+  return <Badge bg="warning" text="dark"> Work In Progress </Badge>
 }
 
 class Portfolio extends React.Component {
@@ -27,28 +41,29 @@ class Portfolio extends React.Component {
     ];
 
     this.skillsJSON = skillsJSON;
+    this.projectsJSON = projectsJSON;
   }
 
   render() {
     return (
       <div>
-        <Navbar bg="light" expand="lg">
+        <Navbar id="nav" bg="light" expand="lg" sticky="top">
           <Container>
             <Navbar.Brand href="#home">Thanussian Sharvananthan</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse>
               <Nav className="me-auto">
-                <Nav.Link href="#">Skills</Nav.Link>
-                <Nav.Link href="#">Projects</Nav.Link>
-                <Nav.Link href="#">Experience</Nav.Link>
-                <Nav.Link href="#">Contact</Nav.Link>
-                <Nav.Link href="#">Blog</Nav.Link>
+                <Nav.Link>Skills</Nav.Link>
+                <Nav.Link>Projects</Nav.Link>
+                <Nav.Link>Experience</Nav.Link>
+                <Nav.Link>Contact</Nav.Link>
+                <Nav.Link>Blog</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
         </Navbar>
 
-        <header className="d-flex justify-content-md-center align-items-center vh-100">
+        <header id="header" className="d-flex justify-content-md-center align-items-center vh-100">
           <Container>
             <Row>
               <Col>
@@ -68,9 +83,9 @@ class Portfolio extends React.Component {
         <br />
         <br />
 
-        <section className="skills">
+        <section id="skills">
+          <h1 className="text-center"> Skills </h1>
           <Container>
-            <h1 className="text-center"> Skills </h1>
             <Tabs defaultActiveKey={Object.keys(this.skillsJSON)[0]} id="uncontrolled-tab-example" className="mb-3">
               {
                 Object.keys(this.skillsJSON).map(key => {
@@ -80,10 +95,12 @@ class Portfolio extends React.Component {
                         <Row xs={1} md={3} className="g-5">
                           {
                             this.skillsJSON[key].map((keyDict) => {
+                              let link = keyDict["imageLink"];
+                              console.log(link);
                               return (
                                 <Col>
                                   <Card>
-                                    <Card.Img variant="top" src={keyDict["imageLink"]} />
+                                    <Card.Img variant="top" as={Image} src={link} />
                                     <Card.Body>
                                       <Card.Title>{keyDict["technology"]}</Card.Title>
                                       <Card.Text>{keyDict["description"]}</Card.Text>
@@ -109,29 +126,39 @@ class Portfolio extends React.Component {
         <br />
         <br />
 
-        <section className="projects">
-          <Container>
-            <h1 className="text-center"> Projects </h1>
-            <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+        <section id="projects">
+          <h1 className="text-center">Projects</h1>
+          <Container className="mt-3">
+            <Tab.Container id="left-tabs-example" defaultActiveKey={this.projectsJSON[0]["name"]}>
               <Row>
                 <Col sm={3}>
                   <Nav variant="pills" className="flex-column">
-                    <Nav.Item>
-                      <Nav.Link eventKey="first">Tab 1</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="second">Tab 2</Nav.Link>
-                    </Nav.Item>
+                    {
+                      this.projectsJSON.map(project => {
+                        return (
+                          <Nav.Item> <Nav.Link eventKey={ project["name"] }> { project["name"] } </Nav.Link> </Nav.Item>
+                        )
+                      })
+                    }
                   </Nav>
                 </Col>
-                <Col sm={9}>
+
+                <Col>
                   <Tab.Content>
-                    <Tab.Pane eventKey="first">
-                      <p> First </p>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="second">
-                      <p> Second </p>
-                    </Tab.Pane>
+                    {
+                      this.projectsJSON.map(project => {
+                        return (
+                          <Tab.Pane eventKey={ project["name"] }>
+                            <p> Technologies Used: <i> { project["depandancies"] } </i> </p>
+                            <a href={ project["github"] } target="blank"> Github </a>
+                            <br />
+                            { project["isWorkInProgress"] ? workInProgressBadge() : completeBadge() }
+                            <br /> <br />
+                            <p> { project["description"] } </p>
+                          </Tab.Pane>
+                        )
+                      })
+                    }
                   </Tab.Content>
                 </Col>
               </Row>
@@ -139,20 +166,65 @@ class Portfolio extends React.Component {
           </Container>
         </section>
 
-        <section className="experience">
+        <br />
+        <br />
 
+        <section id="experience">
+          <h1 className="text-center">Experience</h1>
+          <Container className="mt-3">
+            <Row className="align-items-center">
+              <Col> <img src={hub} width={900} /> </Col>
+              <Col>
+                <p>
+                  Starting around December of 2020, a few peers and myself founded the Victoria Park Hub Code Camp. From the start, the mission statement was simple: <b> provide free coding education</b>. Sponsored and hosted by the <a href="https://www.centraleasthealthline.ca/displayservice.aspx?id=143120" target="blank">Working Women Community Centre</a>, we taught elements of Python and CS Theory/Competitive Programming to middle/high school students alike! I taught over 20 engaged and ecstatic students that wanted to get behind the scenes and enter the lives of a programmer. Nowadays, I oversee said class and maintain relations with various students.
+                </p>
+              </Col>
+            </Row>
+          </Container>
         </section>
 
-        <section className="contact">
+        <br />
+        <br />
 
+        <section id="contact">
+          <h1 className="text-center">Contact Me</h1>
+          <Container className="mt-3">
+            <Form>
+              <Row className="mb-3">
+                <Form.Group as={Col} controlId="formName">
+                  <Form.Label>Name</Form.Label>
+                  <Form.Control type="name" />
+                </Form.Group>
+
+                <Form.Group as={Col} controlId="formEmail">
+                  <Form.Label>Email</Form.Label>
+                  <Form.Control type="email"  />
+                </Form.Group>
+              </Row>
+
+              <Form.Group className="mb-3" controlId="formMessageTextField">
+                <Form.Label>Your Message</Form.Label>
+                <Form.Control as="textarea" rows={3} />
+              </Form.Group>
+
+              <Button variant="primary" type="submit" className="w-100"> Submit </Button>
+            </Form>
+          </Container>
         </section>
 
-        <footer>
-
-        </footer>
+        <br />
+        <br />
       </div>
     )
   }
 }
 
-export default Portfolio;
+const PortfolioApp = () => {
+  return (
+    <div>
+      <Portfolio />
+    </div>
+  )
+}
+
+export default PortfolioApp;
