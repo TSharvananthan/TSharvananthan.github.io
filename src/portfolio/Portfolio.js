@@ -42,6 +42,8 @@ class Portfolio extends React.Component {
 
     this.skillsJSON = skillsJSON;
     this.projectsJSON = projectsJSON;
+
+    this.skillLogoImages = require.context('./skills-logos/png', true);
   }
 
   render() {
@@ -100,7 +102,7 @@ class Portfolio extends React.Component {
                               return (
                                 <Col>
                                   <Card>
-                                    <Card.Img variant="top" as={Image} src={link} />
+                                    <Card.Img variant="top" src={require( `${ link }` ).default} />
                                     <Card.Body>
                                       <Card.Title>{keyDict["technology"]}</Card.Title>
                                       <Card.Text>{keyDict["description"]}</Card.Text>
