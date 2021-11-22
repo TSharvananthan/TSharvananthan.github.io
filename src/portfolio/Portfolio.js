@@ -5,6 +5,7 @@ import {
   Image, Row, Button, Card, Tab, Tabs, Badge,
   Stack, Form
 } from 'react-bootstrap';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Typed from 'react-typed';
 
 import "./Portfolio.css";
@@ -51,14 +52,14 @@ class Portfolio extends React.Component {
       <div>
         <Navbar id="nav" bg="light" expand="lg" sticky="top">
           <Container>
-            <Navbar.Brand href="#home">Thanussian Sharvananthan</Navbar.Brand>
+            <Navbar.Brand href="#header">Thanussian Sharvananthan</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse>
               <Nav className="me-auto">
-                <Nav.Link>Skills</Nav.Link>
-                <Nav.Link>Projects</Nav.Link>
-                <Nav.Link>Experience</Nav.Link>
-                <Nav.Link>Contact</Nav.Link>
+                <Nav.Link href="#skills">Skills</Nav.Link>
+                <Nav.Link href="#projects">Projects</Nav.Link>
+                <Nav.Link href="#experience">Experience</Nav.Link>
+                <Nav.Link href="#contact">Contact</Nav.Link>
                 <Nav.Link href="https://than.hashnode.dev" target="blank">Blog</Nav.Link>
               </Nav>
             </Navbar.Collapse>
@@ -98,8 +99,7 @@ class Portfolio extends React.Component {
                           {
                             this.skillsJSON[key].map((keyDict) => {
                               let link = keyDict["imageLink"];
-                              let skillImage = require( `${ link }` ).default
-                              console.log(link);
+                              let skillImage = require( `${ link }` ).default;
                               return (
                                 <Col>
                                   <Card>
