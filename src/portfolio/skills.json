@@ -41,35 +41,35 @@
   "javascript": [
     {
       "technology": "React.js",
-      "description": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-      "duration": "Some Time Years Ago",
+      "description": "My preferred framework for front-end work. All of my design work was done using React.",
+      "duration": "2 Years+",
       "imageLink": "./skills-logos/png/react.png"
     },
     {
-      "technology": "Express.js",
-      "description": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-      "duration": "Some Time Years Ago",
-      "imageLink": "./skills-logos/png/express.png"
+      "technology": "Node.js",
+      "description": "I use a variety of Node packages to assist me during projects (Axios, Bootstrap).",
+      "duration": "2 Years+",
+      "imageLink": "./skills-logos/png/node.png"
     },
     {
-      "technology": "Node.js",
-      "description": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-      "duration": "Some Time Years Ago",
-      "imageLink": "./skills-logos/png/node.png"
+      "technology": "Express.js",
+      "description": "A backend framework that I only recently started using, I continue to learn and apply it.",
+      "duration": "6 months",
+      "imageLink": "./skills-logos/png/express.png"
     }
   ],
 
   "other": [
     {
       "technology": "MongoDB",
-      "description": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-      "duration": "Some Time Years Ago",
+      "description": "The main database application that I use. I find many uses of it when connected with REACT.",
+      "duration": "6 months",
       "imageLink": "./skills-logos/png/mongo.png"
     },
     {
       "technology": "Rust",
-      "description": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-      "duration": "Some Time Years Ago",
+      "description": "A language that I am currently learning, I hope to incorporate it with my other skills.",
+      "duration": "6 months",
       "imageLink": "./skills-logos/png/rust.png"
     }
   ]

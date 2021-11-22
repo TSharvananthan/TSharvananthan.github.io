@@ -98,11 +98,12 @@ class Portfolio extends React.Component {
                           {
                             this.skillsJSON[key].map((keyDict) => {
                               let link = keyDict["imageLink"];
+                              let skillImage = require( `${ link }` ).default
                               console.log(link);
                               return (
                                 <Col>
                                   <Card>
-                                    <Card.Img variant="top" src={require( `${ link }` ).default} />
+                                    <Card.Img variant="top" src={skillImage} />
                                     <Card.Body>
                                       <Card.Title>{keyDict["technology"]}</Card.Title>
                                       <Card.Text>{keyDict["description"]}</Card.Text>
@@ -178,7 +179,7 @@ class Portfolio extends React.Component {
               <Col> <img src={hub} width={900} /> </Col>
               <Col>
                 <p>
-                  Starting around December of 2020, a few peers and myself founded the Victoria Park Hub Code Camp. From the start, the mission statement was simple: <b> provide free coding education</b>. Sponsored and hosted by the <a href="https://www.centraleasthealthline.ca/displayservice.aspx?id=143120" target="blank">Working Women Community Centre</a>, we taught elements of Python and CS Theory/Competitive Programming to middle/high school students alike! I taught over 20 engaged and ecstatic students that wanted to get behind the scenes and enter the lives of a programmer. Nowadays, I oversee said class and maintain relations with various students.
+                  Since December of 2020, a few peers and myself founded the Victoria Park Hub Code Camp. From the start, the mission statement was simple: <b> provide free coding education</b>. Sponsored and hosted by the <a href="https://www.centraleasthealthline.ca/displayservice.aspx?id=143120" target="blank">Working Women Community Centre</a>, we taught elements of Python and CS Theory/Competitive Programming to middle/high school students alike! I taught over 20 engaged and ecstatic students that wanted to get behind the scenes and enter the lives of a programmer. Nowadays, I oversee said class and maintain relations with various students.
                 </p>
               </Col>
             </Row>
@@ -216,6 +217,16 @@ class Portfolio extends React.Component {
 
         <br />
         <br />
+
+        <footer className="page-footer">
+          <Container>
+            <Row>
+              <Col>1 of 3</Col>
+              <Col xs={5}>Sharvananathan</Col>
+              <Col>3 of 3</Col>
+            </Row>
+          </Container>
+        </footer>
       </div>
     )
   }
